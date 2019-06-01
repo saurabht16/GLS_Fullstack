@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<link>
 	<title>GLS Fullstack Exercise</title>
 	<style type="text/css">
 .myClass1 {padding: 10px 20px;border: 1px solid green;margin-bottom: 50px;}
@@ -10,6 +10,11 @@
 .myClass3 {padding: 50px;border: 1px solid blue;display: inline-block;position: absolute;left: 0px; bottom: 0px;}		
 	</style>
     {% load static %}
+<link rel="stylesheet" href="{% static 'css/tooltip.css' %}">
+<script>
+    var guide = "{{ guide|escapejs }}";
+</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="{% static 'js/player.js' %}"></script>
 </head>
 <body>
