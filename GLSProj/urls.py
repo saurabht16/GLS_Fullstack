@@ -15,7 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import views
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+    path("admin/", admin.site.urls),
+    # Added new url for index page calling the index method in views.py
+    path("", views.index, name = "index"),
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
