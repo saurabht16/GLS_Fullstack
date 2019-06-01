@@ -12,5 +12,4 @@ def index(request):
     with open(guide) as json_file:
         data = json.load(json_file)
         json_string = json.dumps(data)
-        print(json_string)
     return render(request, "index.html", {"guide": json_string})
